@@ -26,6 +26,9 @@ package-lock.json
 bun.lockb
 yarn.lock
 
+# beyond-code docs (not committed)
+.beyond-code/
+
 # ide
 .idea
 *.iml
