@@ -17,18 +17,24 @@ import ConfigCarrier from "@components/ConfigCarrier.astro";
 import { profileConfig, siteConfig } from "@/config";
 import {
 	AUTO_MODE,
-	BANNER_HEIGHT,
-	BANNER_HEIGHT_EXTEND,
+	BANNER_HEIGHT as BANNER_HEIGHT_DEFAULT,
+	BANNER_HEIGHT_EXTEND as BANNER_HEIGHT_EXTEND_DEFAULT,
 	BANNER_HEIGHT_HOME,
 	DARK_MODE,
 	DEFAULT_THEME,
 	LIGHT_MODE,
-	PAGE_WIDTH,
+	PAGE_WIDTH as PAGE_WIDTH_DEFAULT,
 } from "../constants/constants";
 import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
 import { pathsEqual, url } from "../utils/url-utils";
 import "katex/dist/katex.css";
+
+// ponytail: fonts/layout configurable via siteConfig, with constants as defaults
+const bodyFont = siteConfig.fonts?.body ?? "Roboto";
+const codeFont = siteConfig.fonts?.code ?? "JetBrains Mono";
+const pageWidth = siteConfig.layout?.pageWidth ?? PAGE_WIDTH_DEFAULT;
+const bannerHeightOverride = siteConfig.layout?.bannerHeight ?? BANNER_HEIGHT_DEFAULT;
 
 interface Props {
 	title?: string;
@@ -74,8 +80,8 @@ if (!lang) {
 const siteLang = lang.replace("_", "-");
 
 const bannerOffsetByPosition = {
-	top: `${BANNER_HEIGHT_EXTEND}vh`,
-	center: `${BANNER_HEIGHT_EXTEND / 2}vh`,
+	top: `${BANNER_HEIGHT_EXTEND_DEFAULT}vh`,
+	center: `${BANNER_HEIGHT_EXTEND_DEFAULT / 2}vh`,
 	bottom: "0",
 };
 const bannerOffset =
@@ -120,7 +126,7 @@ const bannerOffset =
 		))}
 
 		<!-- Set the theme before the page is rendered to avoid a flash -->
-		<script is:inline define:vars={{DEFAULT_THEME, LIGHT_MODE, DARK_MODE, AUTO_MODE, BANNER_HEIGHT_EXTEND, PAGE_WIDTH, configHue}}>
+		<script is:inline define:vars={{DEFAULT_THEME, LIGHT_MODE, DARK_MODE, AUTO_MODE, BANNER_HEIGHT_EXTEND: BANNER_HEIGHT_EXTEND_DEFAULT, PAGE_WIDTH: pageWidth, configHue}}>
 			// Load the theme from local storage
 			const theme = localStorage.getItem('theme') || DEFAULT_THEME;
 			switch (theme) {
@@ -149,7 +155,9 @@ const bannerOffset =
 		</script>
 		<style define:vars={{
 			configHue,
-			'page-width': `${PAGE_WIDTH}rem`,
+			'page-width': `${pageWidth}rem`,
+			'font-body': bodyFont,
+			'font-code': codeFont,
 		}}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
 
@@ -172,8 +180,13 @@ const bannerOffset =
 <style define:vars={{
 	bannerOffset,
 	'banner-height-home': `${BANNER_HEIGHT_HOME}vh`,
-	'banner-height': `${BANNER_HEIGHT}vh`,
+	'banner-height': `${bannerHeightOverride}vh`,
 }}></style>
+
+<style is:global>
+	body { font-family: var(--font-body), sans-serif; }
+	code, pre { font-family: var(--font-code), monospace; }
+</style>
 
 <script>
 import 'overlayscrollbars/overlayscrollbars.css';
