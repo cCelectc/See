@@ -25,9 +25,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 const postBasePath = entry.filePath
-	? path
-			.dirname(entry.filePath)
-			.replace(/\\/g, "/")
+	? path.dirname(entry.filePath).replace(/\\/g, "/")
 	: "content/posts";
 
 const jsonLd = {

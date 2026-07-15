@@ -26,13 +26,18 @@ const specSchema = z.object({
 	title: z.string().optional(),
 	description: z.string().optional(),
 	image: z.string().optional(),
-	friends: z.array(z.object({
-		name: z.string(),
-		avatar: z.string(),
-		description: z.string(),
-		url: z.string(),
-		tags: z.array(z.string()).optional().default([]),
-	})).optional().default([]),
+	friends: z
+		.array(
+			z.object({
+				name: z.string(),
+				avatar: z.string(),
+				description: z.string(),
+				url: z.string(),
+				tags: z.array(z.string()).optional().default([]),
+			}),
+		)
+		.optional()
+		.default([]),
 });
 
 const postsLoader = glob({
@@ -40,26 +45,22 @@ const postsLoader = glob({
 	pattern: "**/index.{md,mdx}",
 });
 
-const postsCollection: CollectionConfig<
-	typeof postSchema,
-	typeof postsLoader
-> = defineCollection({
-	loader: postsLoader,
-	schema: postSchema,
-});
+const postsCollection: CollectionConfig<typeof postSchema, typeof postsLoader> =
+	defineCollection({
+		loader: postsLoader,
+		schema: postSchema,
+	});
 
 const specLoader = glob({
 	base: "./content/spec",
 	pattern: "**/index.{md,mdx}",
 });
 
-const specCollection: CollectionConfig<
-	typeof specSchema,
-	typeof specLoader
-> = defineCollection({
-	loader: specLoader,
-	schema: specSchema,
-});
+const specCollection: CollectionConfig<typeof specSchema, typeof specLoader> =
+	defineCollection({
+		loader: specLoader,
+		schema: specSchema,
+	});
 
 export const collections: {
 	posts: typeof postsCollection;
