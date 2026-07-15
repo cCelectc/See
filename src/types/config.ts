@@ -36,6 +36,9 @@ export type SiteConfig = {
 	};
 
 	favicon: Favicon[];
+
+	fonts?: FontConfig;
+	layout?: LayoutConfig;
 };
 
 export type Favicon = {
@@ -101,4 +104,30 @@ export type BlogPostData = {
 
 export type ExpressiveCodeConfig = {
 	theme: string;
+};
+
+export type FontConfig = {
+	body: string;
+	code: string;
+};
+
+export type LayoutConfig = {
+	bannerHeight: number;
+	pageWidth: number;
+	pageSize: number;
+};
+
+export type FriendEntry = {
+	name: string;
+	avatar: string;
+	description: string;
+	url: string;
+	tags: string[];
+};
+
+export type SpecData = {
+	title?: string;
+	description?: string;
+	image?: string;
+	friends?: FriendEntry[];
 };
