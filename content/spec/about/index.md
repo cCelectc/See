@@ -7,11 +7,11 @@ description: 这里是 Cccc_ 的个人站点
 
 这里是 **Cccc_** 的个人站点。
 
-::github{repo="Cccc-owo/Mizuki"}
+::github{repo="cCelectc/See"}
 
 > 兴趣使然，随手记录。
 
 ## Links
 
-- GitHub: [Cccc-owo](https://github.com/Cccc-owo)
+- GitHub: [cCelectc](https://github.com/cCelectc)
 - Bilibili: [379876445](https://space.bilibili.com/379876445)
