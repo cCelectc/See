@@ -1,9 +1,18 @@
 ---
 import { Icon } from "astro-icon/components";
-import type { FriendItem } from "../data/friends";
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
+
+interface Friend {
+	name: string;
+	avatar: string;
+	description: string;
+	url: string;
+	tags: string[];
+}
 
 interface Props {
-	friend: FriendItem;
+	friend: Friend;
 }
 
 const { friend } = Astro.props;
@@ -21,29 +30,29 @@ function getHostname(siteurl: string): string {
         <div class="flex items-start gap-4 mb-4">
             <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-[var(--btn-regular-bg)]">
                 <img
-                    src={friend.imgurl}
-                    alt={friend.title}
+                    src={friend.avatar}
+                    alt={friend.name}
                     class="w-full h-full object-cover transition duration-300 group-hover:scale-110"
                     loading="lazy"
                 />
             </div>
             <div class="min-w-0 flex-1">
                 <div class="font-bold text-xl text-90 truncate transition group-hover:text-[var(--primary)]">
-                    {friend.title}
+                    {friend.name}
                 </div>
                 <a
-                    href={friend.siteurl}
+                    href={friend.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-sm text-50 truncate block transition hover:text-[var(--primary)]"
                 >
-                    {getHostname(friend.siteurl)}
+                    {getHostname(friend.url)}
                 </a>
             </div>
         </div>
 
         <div class="text-sm text-75 leading-6 min-h-[3rem] line-clamp-2 mb-4">
-            {friend.desc}
+            {friend.description}
         </div>
 
         <div class="flex flex-wrap gap-2 mb-4">
@@ -55,13 +64,13 @@ function getHostname(siteurl: string): string {
         </div>
 
         <a
-            href={friend.siteurl}
+            href={friend.url}
             target="_blank"
             rel="noopener noreferrer"
             class="btn-regular rounded-lg h-10 px-4 font-medium active:scale-95 inline-flex gap-2"
         >
             <Icon name="fa6-solid:arrow-up-right-from-square" class="text-sm" />
-            Visit
+            {i18n(I18nKey.visit)}
         </a>
     </div>
 

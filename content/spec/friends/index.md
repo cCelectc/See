@@ -1,6 +1,17 @@
 ---
 title: 友链
 description: 一些朋友的网站与博客
+friends:
+  - name: 简的博客
+    avatar: https://liteawa.com/usr/uploads/2024/04/00104-1783255629.webp
+    description: 将微风吹向远方，纪念那个从未逝去的"你"
+    url: https://liteawa.com/
+    tags: [Blog]
+  - name: Yao三七的小博客
+    avatar: https://www.gstech.fun/head.png
+    description: 我的计算机学习分享博客
+    url: https://www.gstech.fun/
+    tags: [Blog, Tech, Programming]
 ---
 
 欢迎交换友链。

@@ -3,19 +3,22 @@ import { render } from "astro:content";
 import FriendCard from "@components/FriendCard.astro";
 import Markdown from "@components/misc/Markdown.astro";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
-import { getActiveSpecEntry } from "@utils/content-utils";
-import { getFriendsList } from "../data/friends";
+import { getSpecEntry } from "@utils/content-utils";
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
 
-const friendsPost = await getActiveSpecEntry("friends");
-const friendsList = getFriendsList();
+const friendsPost = await getSpecEntry("friends");
+const friendsList = friendsPost?.data.friends ?? [];
 const { Content } = friendsPost ? await render(friendsPost) : { Content: null };
+const pageTitle = friendsPost?.data.title ?? i18n(I18nKey.friends);
+const pageDescription = friendsPost?.data.description ?? "";
 ---
 
-<MainGridLayout title="友链" description="一些朋友的网站与博客">
+<MainGridLayout title={pageTitle} description={pageDescription}>
     <div class="card-base px-6 md:px-9 py-6">
         <div class="mb-6">
-            <div class="text-3xl font-bold text-90 mb-2">友链</div>
-            <div class="text-50">一些朋友的网站与博客</div>
+            <div class="text-3xl font-bold text-90 mb-2">{pageTitle}</div>
+            <div class="text-50">{pageDescription}</div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
