@@ -27,7 +27,6 @@ const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 const postBasePath = entry.filePath
 	? path
 			.dirname(entry.filePath)
-			.replace(/^src[\\/]/, "")
 			.replace(/\\/g, "/")
 	: "content/posts";
 
