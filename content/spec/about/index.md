@@ -1,3 +1,8 @@
+---
+title: 关于
+description: 这里是 Cccc_ 的个人站点
+---
+
 # About
 
 这里是 **Cccc_** 的个人站点。

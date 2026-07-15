@@ -213,12 +213,12 @@ category: 技术
 
 [ParaTranz所提供的字符文件](https://static.paratranz.cn/media/chars.txt)
 
-[gb_t_12345标准](/assets/posts/font-bitmap-for-euiv/1gb_t_12345.txt)
+[gb_t_12345标准](./1gb_t_12345.txt)
 
-[gbk标准](/assets/posts/font-bitmap-for-euiv/1gbk.txt)
+[gbk标准](./1gbk.txt)
 
-[古籍印刷标准字](/assets/posts/font-bitmap-for-euiv/1gujiyinshua.txt)
+[古籍印刷标准字](./1gujiyinshua.txt)
 
-[汉仪字库使用字](/assets/posts/font-bitmap-for-euiv/1hanyi_jianfan.txt)
+[汉仪字库使用字](./1hanyi_jianfan.txt)
 
-[国家通用规范字](/assets/posts/font-bitmap-for-euiv/1tongyong_guifan.txt)
+[国家通用规范字](./1tongyong_guifan.txt)
