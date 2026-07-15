@@ -37,6 +37,15 @@ export const siteConfig: SiteConfig = {
 		//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
 		// }
 	],
+	fonts: {
+		body: "Roboto",
+		code: "JetBrains Mono",
+	},
+	layout: {
+		bannerHeight: 35,
+		pageWidth: 75,
+		pageSize: 8,
+	},
 };
 
 export const navBarConfig: NavBarConfig = {
