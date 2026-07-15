@@ -86,22 +86,6 @@ export type LIGHT_DARK_MODE =
 	| typeof DARK_MODE
 	| typeof AUTO_MODE;
 
-export type BlogPostData = {
-	body: string;
-	title: string;
-	published: Date;
-	pinned?: boolean;
-	description: string;
-	tags: string[];
-	draft?: boolean;
-	image?: string;
-	category?: string;
-	prevTitle?: string;
-	prevSlug?: string;
-	nextTitle?: string;
-	nextSlug?: string;
-};
-
 export type ExpressiveCodeConfig = {
 	theme: string;
 };
@@ -117,17 +101,3 @@ export type LayoutConfig = {
 	pageSize: number;
 };
 
-export type FriendEntry = {
-	name: string;
-	avatar: string;
-	description: string;
-	url: string;
-	tags: string[];
-};
-
-export type SpecData = {
-	title?: string;
-	description?: string;
-	image?: string;
-	friends?: FriendEntry[];
-};
