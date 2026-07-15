@@ -13,8 +13,6 @@ export const es: Translation = {
 	[Key.categories]: "Categorías",
 	[Key.recentPosts]: "Publicaciones recientes",
 
-	[Key.comments]: "Comentarios",
-
 	[Key.untitled]: "Sin título",
 	[Key.uncategorized]: "Sin categoría",
 	[Key.noTags]: "Sin etiquetas",
@@ -33,6 +31,14 @@ export const es: Translation = {
 	[Key.systemMode]: "Sistema",
 
 	[Key.more]: "Más",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "Autor",
 	[Key.publishedAt]: "Publicado el",

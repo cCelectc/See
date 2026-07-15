@@ -13,8 +13,6 @@ export const id: Translation = {
 	[Key.categories]: "Kategori",
 	[Key.recentPosts]: "Postingan Terbaru",
 
-	[Key.comments]: "Komentar",
-
 	[Key.untitled]: "Tanpa Judul",
 	[Key.uncategorized]: "Tanpa Kategori",
 	[Key.noTags]: "Tanpa Tag",
@@ -33,6 +31,14 @@ export const id: Translation = {
 	[Key.systemMode]: "Sistem",
 
 	[Key.more]: "Lainnya",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "Penulis",
 	[Key.publishedAt]: "Diterbitkan pada",

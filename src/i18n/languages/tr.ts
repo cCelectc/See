@@ -13,8 +13,6 @@ export const tr: Translation = {
 	[Key.categories]: "Katagoriler",
 	[Key.recentPosts]: "Son Paylaşımlar",
 
-	[Key.comments]: "Yorumlar",
-
 	[Key.untitled]: "Başlıksız",
 	[Key.uncategorized]: "Katagorisiz",
 	[Key.noTags]: "Tag Bulunamadı",
@@ -33,6 +31,14 @@ export const tr: Translation = {
 	[Key.systemMode]: "Sistem",
 
 	[Key.more]: "Daha Fazla",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "Yazar",
 	[Key.publishedAt]: "Yayınlanma:",

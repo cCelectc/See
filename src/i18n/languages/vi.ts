@@ -13,8 +13,6 @@ export const vi: Translation = {
 	[Key.categories]: "Danh mục",
 	[Key.recentPosts]: "Bài viết mới nhất",
 
-	[Key.comments]: "Bình luận",
-
 	[Key.untitled]: "Không tiêu đề",
 	[Key.uncategorized]: "Chưa phân loại",
 	[Key.noTags]: "Chưa có thẻ",
@@ -33,6 +31,14 @@ export const vi: Translation = {
 	[Key.systemMode]: "Hệ thống",
 
 	[Key.more]: "Thêm",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "Tác giả",
 	[Key.publishedAt]: "Đăng vào lúc",

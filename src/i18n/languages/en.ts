@@ -13,8 +13,6 @@ export const en: Translation = {
 	[Key.categories]: "Categories",
 	[Key.recentPosts]: "Recent Posts",
 
-	[Key.comments]: "Comments",
-
 	[Key.untitled]: "Untitled",
 	[Key.uncategorized]: "Uncategorized",
 	[Key.noTags]: "No Tags",
@@ -33,6 +31,14 @@ export const en: Translation = {
 	[Key.systemMode]: "System",
 
 	[Key.more]: "More",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "Author",
 	[Key.publishedAt]: "Published at",

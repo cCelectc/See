@@ -13,8 +13,6 @@ export const ko: Translation = {
 	[Key.categories]: "카테고리",
 	[Key.recentPosts]: "최근 게시물",
 
-	[Key.comments]: "댓글",
-
 	[Key.untitled]: "제목 없음",
 	[Key.uncategorized]: "분류되지 않음",
 	[Key.noTags]: "태그 없음",
@@ -33,6 +31,14 @@ export const ko: Translation = {
 	[Key.systemMode]: "시스템 모드",
 
 	[Key.more]: "더 보기",
+
+	[Key.allRightsReserved]: "All Rights Reserved.",
+	[Key.prevPage]: "Previous Page",
+	[Key.nextPage]: "Next Page",
+	[Key.viewPostsWithTag]: "View posts with this tag",
+	[Key.viewPostsInCategory]: "View posts in this category",
+	[Key.poweredBy]: "Powered by",
+	[Key.visit]: "Visit",
 
 	[Key.author]: "저자",
 	[Key.publishedAt]: "게시일",

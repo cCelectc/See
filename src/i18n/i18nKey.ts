@@ -10,8 +10,6 @@ enum I18nKey {
 	categories = "categories",
 	recentPosts = "recentPosts",
 
-	comments = "comments",
-
 	untitled = "untitled",
 	uncategorized = "uncategorized",
 	noTags = "noTags",
@@ -30,6 +28,14 @@ enum I18nKey {
 	systemMode = "systemMode",
 
 	more = "more",
+
+	allRightsReserved = "allRightsReserved",
+	prevPage = "prevPage",
+	nextPage = "nextPage",
+	viewPostsWithTag = "viewPostsWithTag",
+	viewPostsInCategory = "viewPostsInCategory",
+	poweredBy = "poweredBy",
+	visit = "visit",
 
 	author = "author",
 	publishedAt = "publishedAt",

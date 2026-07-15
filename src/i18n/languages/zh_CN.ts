@@ -13,8 +13,6 @@ export const zh_CN: Translation = {
 	[Key.categories]: "分类",
 	[Key.recentPosts]: "最新文章",
 
-	[Key.comments]: "评论",
-
 	[Key.untitled]: "无标题",
 	[Key.uncategorized]: "未分类",
 	[Key.noTags]: "无标签",
@@ -33,6 +31,14 @@ export const zh_CN: Translation = {
 	[Key.systemMode]: "跟随系统",
 
 	[Key.more]: "更多",
+
+	[Key.allRightsReserved]: "版权所有",
+	[Key.prevPage]: "上一页",
+	[Key.nextPage]: "下一页",
+	[Key.viewPostsWithTag]: "查看此标签的文章",
+	[Key.viewPostsInCategory]: "查看此分类的文章",
+	[Key.poweredBy]: "由",
+	[Key.visit]: "访问",
 
 	[Key.author]: "作者",
 	[Key.publishedAt]: "发布于",

@@ -13,8 +13,6 @@ export const zh_TW: Translation = {
 	[Key.categories]: "分類",
 	[Key.recentPosts]: "最新文章",
 
-	[Key.comments]: "評論",
-
 	[Key.untitled]: "無標題",
 	[Key.uncategorized]: "未分類",
 	[Key.noTags]: "無標籤",
@@ -33,6 +31,14 @@ export const zh_TW: Translation = {
 	[Key.systemMode]: "跟隨系統",
 
 	[Key.more]: "更多",
+
+	[Key.allRightsReserved]: "版權所有",
+	[Key.prevPage]: "上一頁",
+	[Key.nextPage]: "下一頁",
+	[Key.viewPostsWithTag]: "檢視此標籤的文章",
+	[Key.viewPostsInCategory]: "檢視此分類的文章",
+	[Key.poweredBy]: "由",
+	[Key.visit]: "訪問",
 
 	[Key.author]: "作者",
 	[Key.publishedAt]: "發佈於",
