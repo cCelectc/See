@@ -1,27 +1,18 @@
-/* This is a script to create a new post markdown file with front-matter */
+/* This is a script to create a new spec page markdown file with front-matter */
 
 import fs from "node:fs";
 import path from "node:path";
-
-function getDate() {
-	const today = new Date();
-	const year = today.getFullYear();
-	const month = String(today.getMonth() + 1).padStart(2, "0");
-	const day = String(today.getDate()).padStart(2, "0");
-
-	return `${year}-${month}-${day}`;
-}
 
 const args = process.argv.slice(2);
 
 if (args.length === 0) {
 	console.error(`Error: No filename argument provided
-Usage: pnpm new-post -- <name>`);
+Usage: pnpm new-page -- <name>`);
 	process.exit(1);
 }
 
 const name = args[0];
-const targetDir = path.join("./content/posts", name);
+const targetDir = path.join("./content/spec", name);
 
 if (fs.existsSync(targetDir)) {
 	console.error(`Error: Directory ${targetDir} already exists`);
@@ -32,19 +23,12 @@ fs.mkdirSync(targetDir, { recursive: true });
 
 const content = `---
 title: ${name}
-published: ${getDate()}
-updated: ''
 description: ''
 image: ''
-tags: []
-category: ''
-draft: false
-lang: ''
-pinned: false
 ---
 `;
 
 const filePath = path.join(targetDir, "index.md");
 fs.writeFileSync(filePath, content);
 
-console.log(`Post ${filePath} created`);
+console.log(`Page ${filePath} created`);
