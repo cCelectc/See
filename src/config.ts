@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: true,
+		enable: false,
 		src: "assets/images/bliss.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
@@ -56,7 +56,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Friends,
 		{
 			name: "GitHub",
-			url: "https://github.com/Cccc-owo", // Internal links should not include the base path, as it is automatically added
+			url: "https://github.com/cCelectc", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
@@ -77,7 +77,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/Cccc-owo",
+			url: "https://github.com/cCelectc",
 		},
 	],
 };
